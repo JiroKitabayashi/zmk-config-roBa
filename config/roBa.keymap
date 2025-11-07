@@ -82,11 +82,13 @@
         };
 
         // ロータリーエンコーダでスクロールイベントを送出するためのビヘイビア
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -136,11 +138,12 @@
 
         MOUSE {
             // 左シフト位置を押しながらトラックボール操作時にスクロールレイヤーへ切り替えるための割り当て
+
             bindings = <
-&mo 5   &trans  &kp PAGE_UP    &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &kp PAGE_DOWN  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &lt 5 LEFT_SHIFT  &trans    &trans    &trans
-&trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans                                &trans
+&mo 5           &trans  &kp PAGE_UP    &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans          &trans  &kp PAGE_DOWN  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&kp LEFT_SHIFT  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &reset    &trans    &trans    &trans
+&trans          &trans  &trans         &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -153,6 +156,7 @@
             >;
 
             // シフトで切り替えたスクロールレイヤーにエンコーダのスクロール挙動を割り当てる
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
