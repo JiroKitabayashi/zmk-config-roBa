@@ -140,10 +140,10 @@
             // 左シフト位置を押しながらトラックボール操作時にスクロールレイヤーへ切り替えるための割り当て
 
             bindings = <
-&mo 5           &trans  &kp PAGE_UP    &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans          &trans  &kp PAGE_DOWN  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&kp LEFT_SHIFT  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &reset    &trans    &trans    &trans
-&trans          &trans  &trans         &trans  &trans  &trans      &trans  &trans                                &trans
+&mo 5                    &trans  &kp PAGE_UP    &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans                   &trans  &kp PAGE_DOWN  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&mt LEFT_SHIFT NUMBER_5  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &reset    &trans    &trans    &trans
+&trans                   &trans  &trans         &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
